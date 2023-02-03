@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale-1.0">
+        <title>Ravindra Kumbhar</title>
+        <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    </head>
+    <body class="baody_1">
+
+        <section>
+            
+            <header>
+                <!-- <img class="logo" src="logo_1.png" alt="logo"> -->
+                <div class="logo">
+                    <p>RK</p>
+                </div>
+                <nav>
+                    <ul class="nav_links">
+                        <li><a href="Sample.html">Home</a></li>
+                        <li><a href="Sample.html">About</a></li>
+                        <li><a href="Sample.html">Projects</a></li>
+                        <li><a href="Sample.html">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <label for="check">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+            </header>
+
+        
+        
+                <div class="content">
+                    <div class="info">
+                        <h2>Like Nature<br><span>Be creative</span></h2>
+                        <p> This is the Landing page that i have made using various kinds of tools in css and html also imported some libaries </p>
+                        <a href="#" class="btn-info">Enquiry now</a>
+                    </div>
+                </div>
+
+            </section>
+                <!--image slider start-->
+    <div class="slider">
+        <div class="slides">
+          <!--radio buttons start-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!--radio buttons end-->
+          <!--slide images start-->
+          <div class="slide first">
+            <img src="bg_1 (1).jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="bg_1 (2).jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="bg_1 (3).jpg" alt="">
+          </div>
+          <div class="slide">
+            <img src="bg_1 (4).jpg" alt="">
+          </div>
+          <!--slide images end-->
+          <!--automatic navigation start-->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+          <!--automatic navigation end-->
+        </div>
+        <!--manual navigation start-->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!--manual navigation end-->
+      </div>
+      <!--image slider end-->
+  
+      <script type="text/javascript">
+      var counter = 1;
+      setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 4){
+          counter = 1;
+        }
+      }, 5000);
+      </script>
+  
+                <!-- popup form code -->
+                <div class="login_popup" id="popup_form">
+                    <div class="box">
+                        <div class="form">
+                            <div class="close" id="close_btn">&times;</div>
+                            <h1>User Details</h1>
+                            <div class="form_group">
+                                <input type="text" placeholder="Enter your name" class="popup_input">
+                            </div>
+                            <div class="form_group">
+                                <input type="text" placeholder="Enter your email" class="popup_input">
+                            </div>
+                            <div class="form_group">
+                                <input type="text" placeholder="Enter your Contact number" class="popup_input">
+                            </div>
+                            <div class="form_group">
+                                <label>
+                                <input type="checkbox"> Remember me
+                                </label>
+                            </div>
+                            <button class="btn" onclick="openpopup()">Submit</button>
+                            <div class="pop_up" id="pop_up">
+                                <img src="pngfind.com-party-emoji-png-102223.png">
+                                <h3>Thank You</h3>
+                                <p>Your details has been successfully submitted. Thanks!</p>
+                                <button type="button"  class ="button" onclick="closepopup()">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- popup form ends -->
+
+                <!-- popup form starts in js-->
+                <script type="text/javascript">
+                    var popup_login = document.getElementById('popup_form');
+                    var close = document.getElementById('close_btn');
+                
+                    window.addEventListener("load", function(){
+                
+                        setTimeout(function(){
+                
+                            popup_login.classList.add('anyname');
+                
+                         },5000) 
+                
+                
+                    }) 
+                    close.addEventListener("click", function(){
+                            popup_login.classList.remove('anyname');
+                         }) 
+    
+                </script>
+                <!-- popup form ends in js -->
+
+                <!-- popup thankyou code starts -->
+                <script>
+                    let pop_up= document.getElementById("pop_up");
+                    function openpopup()
+                    {
+                        pop_up.classList.add("open_popup");
+                    }
+                    function closepopup()
+                    {
+                        pop_up.classList.remove("open_popup");
+                    }
+                </script>
+                <!-- popup thank you code ends -->
+            
+            
+            
+                <footer>
+                    <p>
+                        &copy; Ravindra Kumbhar
+                    </p><br>
+                    <div class="media-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <br>
+                    </div>
+                
+                </footer>
+            <!-- </section> -->
+
+    </body>
+</html>
